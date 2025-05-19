@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,32 +6,22 @@
 
 html,
 body {
-  height: 100%;     
+  height: 100%;
 }
-
 body {
-  
-  min-height: 100vh; 
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #0b2434;
-  padding: 30px 10px;        
+  padding: 30px 10px;
 }
 
-body {
-  background-color: #0b2434;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  height: auto;
-}
+/* 3. Root */
 #root {
   width: 100%;
   height: auto;
 }
-
 
 main {
   background-color: aliceblue;
@@ -42,13 +31,10 @@ main {
   justify-content: center;
   align-items: center;
   gap: 1.6rem;
-  overflow: hidden;
   width: 100%;
   max-width: 500px;
-  margin: 0 auto;
   padding: 2rem 1rem;
 }
-
 
 .title {
   font-family: Inter, sans-serif;
@@ -64,7 +50,6 @@ main {
   width: 100%;
 }
 
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -77,27 +62,23 @@ main {
   border: 0;
 }
 
-
 .flex-container {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1 1 auto;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(2, minmax(48px, 1fr));
-  gap: 0.5rem;
-  width: 85%;
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+  gap: 0.75rem;
+  width: 100%;
+  margin-bottom: 2rem;
 }
 
-
 .tab {
-  background-color: #ffffff;
+  background-color: #fff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   border: none;
@@ -109,50 +90,32 @@ main {
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
-  margin: 0;
-  padding: 0;
 }
-
 
 .roll-button {
   font-family: Inter, sans-serif;
   font-weight: 700;
   font-size: 1.1rem;
   background-color: #5035ff;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 10px;
-  padding: 1rem;
-  padding-inline: 27px;
+  padding: 1rem 2rem;
   cursor: pointer;
   position: sticky;
   bottom: 1rem;
-  width: 45%;
+  width: 60%;
   max-width: 300px;
-  margin: 1rem auto 0;
+  margin: 0 auto;
   text-align: center;
-  
 }
 
-/* Responsive Tweaks */
-@media (max-width: 850px) {
-  .tab {
-    font-size: 1.4rem;
-  }
-}
-
+/* 10. Tweak dice size/text on smaller screens */
 @media (max-width: 500px) {
+  .grid-container {
+    gap: 0.5rem;
+  }
   .tab {
     font-size: 1.3rem;
-  }
-}
-
-@media (max-width: 360px) {
-  main{
-    height: 85vh;
-  }
-  .grid-container {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, minmax(40px, 1fr));
   }
 }
