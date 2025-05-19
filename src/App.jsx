@@ -81,7 +81,9 @@ export default function App() {
         Roll until all dice are the same. Click each die to freeze it at its
         current value between rolls.
       </div>
-      <div className="grid-container">{diceElements}</div>
+      <div className="flex-container">
+        <div className="grid-container">{diceElements}</div>
+      </div>
       <button ref={buttonRef} onClick={rollDice} className="roll-button">
         {gameWon ? "New Game" : "Roll"}
       </button>
